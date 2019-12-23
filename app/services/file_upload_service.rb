@@ -13,6 +13,8 @@ class FileUploadService
   end
 
   def save!
+    Country.destroy_all
+
     @file_upload.save
     @file_upload.uploading!
 
