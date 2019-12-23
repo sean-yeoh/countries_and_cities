@@ -1,0 +1,16 @@
+<div class="row">
+  <div class="col">
+    <h1>New File Upload</h1>
+  </div>
+  <div class="col-auto">
+    <%= link_to 'Back', [:admin, :file_uploads], class: 'btn btn-secondary' %>
+  </div>
+</div>
+
+<%= form_with model: [:admin, @file_upload], multipart: true, local: true do |f| %>
+  <%= f.file_field :attachment %>
+
+  <div class="text-right">
+    <%= f.submit 'Save', class: 'btn btn-primary' %>
+  </div>
+<% end %>

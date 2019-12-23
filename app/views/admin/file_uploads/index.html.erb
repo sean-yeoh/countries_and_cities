@@ -1,0 +1,29 @@
+<div class="row">
+  <div class="col">
+    <h1>File Uploads</h1>
+  </div>
+  <div class="col-auto">
+    <%= link_to 'New File Upload', [:new, :admin, :file_upload], class: 'btn btn-primary' %>
+  </div>
+</div>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Created</th>
+      <th>Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <% @file_uploads.each do |file_upload| %>
+        <tr>
+          <td><%= file_upload.id %></td>
+          <td><%= file_upload.created_at %></td>
+          <td><%= file_upload.status.humanize %></td>
+        </tr>
+      <% end %>
+    </tr>
+  </tbody>
+</table>
