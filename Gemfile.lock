@@ -73,7 +73,10 @@ GEM
       xpath (~> 3.2)
     childprocess (3.0.0)
     concurrent-ruby (1.1.5)
+    content_disposition (1.0.0)
     crass (1.0.5)
+    down (5.0.0)
+      addressable (~> 2.5)
     erubi (1.9.0)
     ffi (1.11.3)
     globalid (0.4.2)
@@ -157,6 +160,9 @@ GEM
     selenium-webdriver (3.142.6)
       childprocess (>= 0.5, < 4.0)
       rubyzip (>= 1.2.2)
+    shrine (3.1.0)
+      content_disposition (~> 1.0)
+      down (~> 5.0)
     spring (2.1.0)
     spring-watcher-listen (2.0.1)
       listen (>= 2.7, < 4.0)
@@ -210,6 +216,7 @@ DEPENDENCIES
   rails (~> 6.0.1)
   sass-rails (>= 6)
   selenium-webdriver
+  shrine (~> 3.0)
   spring
   spring-watcher-listen (~> 2.0.0)
   turbolinks (~> 5)
