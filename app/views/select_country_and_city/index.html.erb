@@ -1,1 +1,20 @@
-<h1>Select Country</h1>
+
+<%= form_with url: "/", method: "get", data: { country_and_city_form: '' }, local: true do %>
+  <h2>Select Country</h2>
+
+  <div class="row mb-4">
+    <div class="col-12 col-lg-4">
+      <%= select_tag :country, options_for_select(@countries.collect { |country| [country.country_name, country.name] }), include_blank: true, data: { country_select: '' }, style: 'width: 100%' %>
+    </div>
+  </div>
+
+  <h2>Select City</h2>
+
+  <div class="row mb-4">
+    <div class="col-12 col-lg-4">
+      <%= select_tag :city, options_for_select([]), include_blank: true, data: { city_select: '' }, style: 'width: 100%' %>
+    </div>
+  </div>
+
+  <%= submit_tag "Submit", class: 'btn btn-primary d-block', disabled: true %>
+<% end %>
