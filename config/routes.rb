@@ -4,4 +4,7 @@ Rails.application.routes.draw do
     resources :file_uploads
     get '/' => 'file_uploads#index'
   end
+
+  resources :select_country_and_city, only: :index
+  root to: 'select_country_and_city#index'
 end

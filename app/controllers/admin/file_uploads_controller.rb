@@ -3,7 +3,7 @@
 module Admin
   class FileUploadsController < Admin::BaseController
     def index
-      @file_uploads = FileUpload.all
+      @file_uploads = FileUpload.all.order(created_at: :desc)
     end
 
     def new
