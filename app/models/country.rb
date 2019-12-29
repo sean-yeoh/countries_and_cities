@@ -4,7 +4,5 @@ class Country < ApplicationRecord
 
   def country_name
     ISO3166::Country[name].to_s
-  rescue StandardError
-    ''
   end
 end
